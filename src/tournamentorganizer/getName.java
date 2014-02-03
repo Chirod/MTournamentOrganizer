@@ -175,14 +175,14 @@ public class getName extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-     TournamentOrganizer.getPlayer(1).setName(Player1Name.getText());
-     TournamentOrganizer.getPlayer(2).setName(Player2Name.getText());
-     TournamentOrganizer.getPlayer(3).setName(Player3Name.getText());
-     TournamentOrganizer.getPlayer(4).setName(Player4Name.getText());
-     TournamentOrganizer.getPlayer(5).setName(Player5Name.getText());
-     TournamentOrganizer.getPlayer(6).setName(Player6Name.getText());
-     TournamentOrganizer.getPlayer(7).setName(Player7Name.getText());
-     TournamentOrganizer.getPlayer(8).setName(Player8Name.getText());
+     TournamentOrganizer.myPlayer[0].setName(Player1Name.getText());
+     TournamentOrganizer.myPlayer[1].setName(Player2Name.getText());
+     TournamentOrganizer.myPlayer[2].setName(Player3Name.getText());
+     TournamentOrganizer.myPlayer[3].setName(Player4Name.getText());
+     TournamentOrganizer.myPlayer[4].setName(Player5Name.getText());
+     TournamentOrganizer.myPlayer[5].setName(Player6Name.getText());
+     TournamentOrganizer.myPlayer[6].setName(Player7Name.getText());
+     TournamentOrganizer.myPlayer[7].setName(Player8Name.getText());
      dispose();
     }//GEN-LAST:event_jButton1MouseClicked
 

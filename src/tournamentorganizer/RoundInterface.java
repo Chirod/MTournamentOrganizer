@@ -153,15 +153,10 @@ public class RoundInterface extends javax.swing.JFrame {
      myPassword[14] = '4';
      myPassword[15] = '7';
         if(Password.getPassword() == myPassword) {
-            for (int i = 1; i<=100; i++){
-                for(int a = 1; a <=8; a++){
-                   if(TournamentOrganizer.myPlayer[a].getMatchPoints() > TournamentOrganizer.myPlayer[a+1].getMatchPoints()) {
-                       TournamentOrganizer.swapPlayers(TournamentOrganizer.getPlayer(a), TournamentOrganizer.getPlayer(a + 1));
-                   }       
-                }
-                
-            }
-        
+          
+            
+            
+            
         }
     }//GEN-LAST:event_GiveResultsButtonMouseClicked
 
@@ -198,6 +193,16 @@ public class RoundInterface extends javax.swing.JFrame {
                 new RoundInterface().setVisible(true);
             }
         });
+    }
+    private void changePairingsView() {
+        Table1Favored.setText(TournamentOrganizer.myTables[0].player1.getName());
+        Table1Unfavored.setText(TournamentOrganizer.myTables[0].player2.getName());
+        Table2Favored.setText(TournamentOrganizer.myTables[1].player1.getName());
+        Table2Unfavored.setText(TournamentOrganizer.myTables[1].player2.getName());
+        Table3Favored.setText(TournamentOrganizer.myTables[2].player1.getName());
+        Table3Unfavored.setText(TournamentOrganizer.myTables[2].player2.getName());
+        Table4Favored.setText(TournamentOrganizer.myTables[3].player1.getName());
+        Table4Unfavored.setText(TournamentOrganizer.myTables[3].player2.getName());
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

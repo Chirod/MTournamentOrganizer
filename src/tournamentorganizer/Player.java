@@ -14,10 +14,14 @@ public class Player {
     private int matchPoints;
     private int gameWinsTiebreaker;
     private String Name;
-    public Player(String name){
+    private int myPlayerNumber;
+    public boolean isAssigned;
+    public Player(String name, int playerNumber){
         matchPoints = 0;
         gameWinsTiebreaker = 0;
         Name = name;
+        myPlayerNumber = playerNumber;
+        isAssigned = false;
     }
     public void addRecord(int GameWins,int GameLosses,int draws){
         if (GameWins>GameLosses){
@@ -38,5 +42,9 @@ public class Player {
     void setName(String text) {
         Name = text;
     }
+    public int getPlayerNumber() {
+        return myPlayerNumber;
+    }
+    
     
 }
