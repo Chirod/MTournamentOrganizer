@@ -165,6 +165,10 @@ Timer myTimer = new Timer();
      myPassword[14] = '4';
      myPassword[15] = '7';
         if(Password.getPassword() == myPassword) {
+            
+            
+            
+            
             TournamentOrganizer.configurePairings();
             
             
