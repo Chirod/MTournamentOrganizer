@@ -22,9 +22,13 @@ public class TournamentOrganizer {
     }
     public static Table[] myTables = new Table[4];
    
-    public void 
+    public static void configurePairings() {
+        clearPlayersFromTables();
+        sortRankings();
+        sortPairings();
+    }
     
-    public void sortRankings(){
+    public static void sortRankings(){
         for (int i = 0; i<8;i++){
             for (int a = 0; a<8; a++){
                 if (PlayerRanked[a].getMatchPoints()<PlayerRanked[a+1].getMatchPoints()) {
@@ -33,14 +37,14 @@ public class TournamentOrganizer {
             }
         }
     }
-    public void swap(int a, int b){
+    public static void swap(int a, int b){
         PlaceHolderPlayer = PlayerRanked[a];
         PlayerRanked[a] = PlayerRanked[b];
         PlayerRanked[b] = PlaceHolderPlayer;
     
     }
     
-    public void sortPairings() {
+    public static void sortPairings() {
         sortRankings();
       boolean a;
         for(int i =0;i<8;i++){
@@ -52,6 +56,14 @@ public class TournamentOrganizer {
             }
       
         }     
+    }
+    public static void clearPlayersFromTables() {
+        for(Player a: myPlayer){
+            a.isAssigned = false;
+        }
+        for(Table b: myTables){
+            b.clear();
+        }
     }
     
 }

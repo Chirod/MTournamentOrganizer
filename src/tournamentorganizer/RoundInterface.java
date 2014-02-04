@@ -6,18 +6,30 @@
 
 package tournamentorganizer;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  *
  * @author Jessica &Christopher
  */
 public class RoundInterface extends javax.swing.JFrame {
+Timer myTimer = new Timer();
 
     /**
      * Creates new form RoundInterface
      */
     public RoundInterface() {
         initComponents();
+        myTimer.scheduleAtFixedRate(update,0, 100);
     }
+    private TimerTask update = new TimerTask() {
+
+    @Override
+    public void run() {
+      changePairingsView();
+    }
+};
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -153,7 +165,8 @@ public class RoundInterface extends javax.swing.JFrame {
      myPassword[14] = '4';
      myPassword[15] = '7';
         if(Password.getPassword() == myPassword) {
-          
+            TournamentOrganizer.configurePairings();
+            
             
             
             
@@ -190,6 +203,7 @@ public class RoundInterface extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                TournamentOrganizer.configurePairings();
                 new RoundInterface().setVisible(true);
             }
         });
