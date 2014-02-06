@@ -165,15 +165,8 @@ Timer myTimer = new Timer();
      myPassword[14] = '4';
      myPassword[15] = '7';
         if(Password.getPassword() == myPassword) {
-            
-            
-            
-            
-            TournamentOrganizer.configurePairings();
-            
-            
-            
-            
+           GetResults.main();
+            TournamentOrganizer.configurePairings();      
         }
     }//GEN-LAST:event_GiveResultsButtonMouseClicked
 
@@ -207,7 +200,9 @@ Timer myTimer = new Timer();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                System.out.println("started round interface runnable");
                 TournamentOrganizer.configurePairings();
+                System.out.println("finished configuring pairings");
                 new RoundInterface().setVisible(true);
             }
         });

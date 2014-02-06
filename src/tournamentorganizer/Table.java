@@ -10,9 +10,9 @@ package tournamentorganizer;
  * @author Jessica &Christopher
  */
 class Table {
-
-    Player player1 = null;
-    Player player2 = null;
+    Player WorthLessPlayer = new Player("worthless",0);
+    Player player1 = WorthLessPlayer;
+    Player player2 = WorthLessPlayer;
 
     public Player getPlayer1() {
         return player1;
@@ -23,7 +23,7 @@ class Table {
             player1 = myPlayer;
             player1.isAssigned = true;
             return true;
-        } else if (player2 == null
+        } else if (player2 == WorthLessPlayer
                 && TournamentOrganizer.havePlayed[player1.getPlayerNumber()][ myPlayer.getPlayerNumber()]
                 && (!(player1 == myPlayer))) {
                     player2 = myPlayer;
@@ -36,7 +36,8 @@ class Table {
     }
 
     public void clear() {
-        player1 = null;
-        player2 = null;
+        System.out.println("clearing players in table");
+        player1 = WorthLessPlayer;
+        player2 = WorthLessPlayer;
     }
 }

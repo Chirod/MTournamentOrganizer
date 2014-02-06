@@ -16,14 +16,28 @@ public class TournamentOrganizer {
             myPlayer[i] = new Player("",0);
             PlayerRanked[i] = myPlayer[i];
         }
+        System.out.println("Players in tournament organizer created");
+        for(boolean[] array:havePlayed){
+            for(boolean var: array){
+                var = false;
+            }
+            
+        }
         
+        System.out.println("Have played var's created, starting primary interface");
+        for(Table currentTable : myTables){
+            currentTable = new Table();
+        }
+        System.out.println("tables created");
         RoundInterface.main();
              
     }
     public static Table[] myTables = new Table[4];
    
     public static void configurePairings() {
+        System.out.println("starting to configure pairings");
         clearPlayersFromTables();
+        System.out.println("finished clearing players");
         sortRankings();
         sortPairings();
     }
@@ -58,11 +72,15 @@ public class TournamentOrganizer {
         }     
     }
     public static void clearPlayersFromTables() {
-        for(Player a: myPlayer){
-            a.isAssigned = false;
+        System.out.println(" stared clearing players:");
+        for(int i = 0; i<8; i++){
+             myPlayer[i].isAssigned = false;
+             System.out.println("player" + i + "cleared");
+            
         }
-        for(Table b: myTables){
-            b.clear();
+        
+        for(int a = 0; a<4; a++){
+            myTables[a].clear();
         }
     }
     
