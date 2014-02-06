@@ -13,20 +13,23 @@ public class TournamentOrganizer {
     public static Player PlaceHolderPlayer;
     public static void main(String[] args) {
         for(int i =0;i<=7;i++){
-            myPlayer[i] = new Player("",0);
+            myPlayer[i] = new Player("",i);
             PlayerRanked[i] = myPlayer[i];
         }
         System.out.println("Players in tournament organizer created");
-        for(boolean[] array:havePlayed){
-            for(boolean var: array){
-                var = false;
+        for(int b = 0; b<8;b++){
+         
+            for(int c = 0; c<8;c++){
+            
+                havePlayed[b][c] = false;
+                
             }
             
         }
         
         System.out.println("Have played var's created, starting primary interface");
-        for(Table currentTable : myTables){
-            currentTable = new Table();
+        for(int a = 0; a<4; a++){
+            myTables[a] = new Table();
         }
         System.out.println("tables created");
         RoundInterface.main();
@@ -39,13 +42,16 @@ public class TournamentOrganizer {
         clearPlayersFromTables();
         System.out.println("finished clearing players");
         sortRankings();
+        System.out.println("finished sorting rankings");
         sortPairings();
+        System.out.println("finished sorting pairings");
+        System.out.println("finished  configuring pairings");
     }
     
     public static void sortRankings(){
         for (int i = 0; i<8;i++){
-            for (int a = 0; a<8; a++){
-                if (PlayerRanked[a].getMatchPoints()<PlayerRanked[a+1].getMatchPoints()) {
+            for (int a = 0; a<7; a++){
+                if (PlayerRanked[a].getMatchPoints()<PlayerRanked[(a+1)].getMatchPoints()) {
                     swap(a,a+1);
                 }
             }
@@ -59,13 +65,16 @@ public class TournamentOrganizer {
     }
     
     public static void sortPairings() {
-        sortRankings();
-      boolean a;
+      boolean succesfullyAssigned;
         for(int i =0;i<8;i++){
             if (!PlayerRanked[i].isAssigned){
-                a = false;
-                for(int b = 0; !a; b++){
-                    a = myTables[b].assignPlayer(PlayerRanked[i]);
+                succesfullyAssigned = false;
+                for(int b = 0; !succesfullyAssigned && b < 4; b++){
+                    if (b==4) System.out.print("b is equal to 4");
+                    
+                    System.out.println("attempting to assign player "+i+" to table "+b);
+                    succesfullyAssigned = myTables[b].assignPlayer(PlayerRanked[i]);
+                    if (succesfullyAssigned) System.out.println("succesfully assigned player" + PlayerRanked[i].getPlayerNumber());
                 }
             }
       

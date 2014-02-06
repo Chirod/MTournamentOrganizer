@@ -4,7 +4,7 @@
  */
 package tournamentorganizer;
 
-import com.oracle.jrockit.jfr.Transition;
+
 
 /**
  *
@@ -19,14 +19,14 @@ public class GetResults extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        jLabel1.setText(TournamentOrganizer.myTables[1].player1.getName());
-        jLabel2.setText(TournamentOrganizer.myTables[1].player2.getName());
-        jLabel3.setText(TournamentOrganizer.myTables[2].player1.getName());
-        jLabel4.setText(TournamentOrganizer.myTables[2].player2.getName());
-        jLabel5.setText(TournamentOrganizer.myTables[3].player1.getName());
-        jLabel6.setText(TournamentOrganizer.myTables[3].player2.getName());
-        jLabel7.setText(TournamentOrganizer.myTables[4].player1.getName());
-        jLabel8.setText(TournamentOrganizer.myTables[4].player2.getName());
+        jLabel1.setText(TournamentOrganizer.myTables[0].player1.getName());
+        jLabel2.setText(TournamentOrganizer.myTables[0].player2.getName());
+        jLabel3.setText(TournamentOrganizer.myTables[1].player1.getName());
+        jLabel4.setText(TournamentOrganizer.myTables[1].player2.getName());
+        jLabel5.setText(TournamentOrganizer.myTables[2].player1.getName());
+        jLabel6.setText(TournamentOrganizer.myTables[2].player2.getName());
+        jLabel7.setText(TournamentOrganizer.myTables[3].player1.getName());
+        jLabel8.setText(TournamentOrganizer.myTables[3].player2.getName());
         Table1 = false;
         Table2 = false;
         Table3 = false;
@@ -286,10 +286,10 @@ public class GetResults extends javax.swing.JDialog {
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel4))
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -297,11 +297,11 @@ public class GetResults extends javax.swing.JDialog {
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel6))
+                    .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton9)
                         .addComponent(jButton10)
-                        .addComponent(jButton11)
-                        .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jButton11)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -320,124 +320,124 @@ public class GetResults extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 boolean Table1;
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-       if (Table1){
-        TournamentOrganizer.myTables[1].player1.addRecord(2, 0, 0);
-       TournamentOrganizer.myTables[1].player2.addRecord(0, 2, 0);
+       if (!Table1){
+        TournamentOrganizer.myTables[0].player1.addRecord(2, 0, 0);
+       TournamentOrganizer.myTables[0].player2.addRecord(0, 2, 0);
        Table1 = true;
        }
        CheckIfComplete();
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-       if (Table1){
-        TournamentOrganizer.myTables[1].player1.addRecord(2, 1, 0);
-       TournamentOrganizer.myTables[1].player2.addRecord(1, 2, 0);
+       if (!Table1){
+        TournamentOrganizer.myTables[0].player1.addRecord(2, 1, 0);
+       TournamentOrganizer.myTables[0].player2.addRecord(1, 2, 0);
        Table1 = true;
        }
        CheckIfComplete();
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        if (Table1){
-        TournamentOrganizer.myTables[1].player1.addRecord(1, 2, 0);
-       TournamentOrganizer.myTables[1].player2.addRecord(2, 1, 0);
+        if (!Table1){
+        TournamentOrganizer.myTables[0].player1.addRecord(1, 2, 0);
+       TournamentOrganizer.myTables[0].player2.addRecord(2, 1, 0);
        Table1 = true;
        }
         CheckIfComplete();
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        if (Table1){
-        TournamentOrganizer.myTables[1].player1.addRecord(0, 2, 0);
-       TournamentOrganizer.myTables[1].player2.addRecord(2, 0, 0);
+        if (!Table1){
+        TournamentOrganizer.myTables[0].player1.addRecord(0, 2, 0);
+       TournamentOrganizer.myTables[0].player2.addRecord(2, 0, 0);
        Table1 = true;
        }
         CheckIfComplete();
     }//GEN-LAST:event_jButton4MouseClicked
 boolean Table2;
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-    if (Table2){
-        TournamentOrganizer.myTables[2].player1.addRecord(2, 0, 0);
-       TournamentOrganizer.myTables[2].player2.addRecord(0, 2, 0);
+    if (!Table2){
+        TournamentOrganizer.myTables[1].player1.addRecord(2, 0, 0);
+       TournamentOrganizer.myTables[1].player2.addRecord(0, 2, 0);
        Table2 = true;
        }
     CheckIfComplete();
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-   if (Table2){
-        TournamentOrganizer.myTables[2].player1.addRecord(2, 1, 0);
-       TournamentOrganizer.myTables[2].player2.addRecord(1, 2, 0);
+   if (!Table2){
+        TournamentOrganizer.myTables[1].player1.addRecord(2, 1, 0);
+       TournamentOrganizer.myTables[1].player2.addRecord(1, 2, 0);
        Table2 = true;
        }
    CheckIfComplete();
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-        if (Table2){
-        TournamentOrganizer.myTables[2].player1.addRecord(1, 2, 0);
-       TournamentOrganizer.myTables[2].player2.addRecord(2, 1, 0);
+        if (!Table2){
+        TournamentOrganizer.myTables[1].player1.addRecord(1, 2, 0);
+       TournamentOrganizer.myTables[1].player2.addRecord(2, 1, 0);
        Table2 = true;
        }
         CheckIfComplete();
     }//GEN-LAST:event_jButton8MouseClicked
 
     private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
-     if (Table2){
-        TournamentOrganizer.myTables[2].player1.addRecord(0, 2, 0);
-       TournamentOrganizer.myTables[2].player2.addRecord(2, 0, 0);
+     if (!Table2){
+        TournamentOrganizer.myTables[1].player1.addRecord(0, 2, 0);
+       TournamentOrganizer.myTables[1].player2.addRecord(2, 0, 0);
        Table2 = true;
        }
      CheckIfComplete();
     }//GEN-LAST:event_jButton7MouseClicked
   boolean Table3;
     private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
-       if (Table3){
-        TournamentOrganizer.myTables[3].player1.addRecord(2, 0, 0);
-       TournamentOrganizer.myTables[3].player2.addRecord(0, 2, 0);
+       if (!Table3){
+        TournamentOrganizer.myTables[2].player1.addRecord(2, 0, 0);
+       TournamentOrganizer.myTables[2].player2.addRecord(0, 2, 0);
        Table3 = true;
        }
        CheckIfComplete();
     }//GEN-LAST:event_jButton12MouseClicked
 
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
-        if (Table3){
-        TournamentOrganizer.myTables[3].player1.addRecord(2, 1, 0);
-       TournamentOrganizer.myTables[3].player2.addRecord(1, 2, 0);
+        if (!Table3){
+        TournamentOrganizer.myTables[2].player1.addRecord(2, 1, 0);
+       TournamentOrganizer.myTables[2].player2.addRecord(1, 2, 0);
        Table3 = true;
        }
         CheckIfComplete();
     }//GEN-LAST:event_jButton11MouseClicked
 
     private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
-       if (Table3){
-        TournamentOrganizer.myTables[3].player1.addRecord(1, 2, 0);
-       TournamentOrganizer.myTables[3].player2.addRecord(2, 1, 0);
+       if (!Table3){
+        TournamentOrganizer.myTables[2].player1.addRecord(1, 2, 0);
+       TournamentOrganizer.myTables[2].player2.addRecord(2, 1, 0);
        Table3 = true;
        CheckIfComplete();
        }
     }//GEN-LAST:event_jButton10MouseClicked
 
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
-      if (Table3){
-        TournamentOrganizer.myTables[3].player1.addRecord(0, 2, 0);
-       TournamentOrganizer.myTables[3].player2.addRecord(2, 0, 0);
+      if (!Table3){
+        TournamentOrganizer.myTables[2].player1.addRecord(0, 2, 0);
+       TournamentOrganizer.myTables[2].player2.addRecord(2, 0, 0);
        Table3 = true;
        CheckIfComplete();
        }
     }//GEN-LAST:event_jButton9MouseClicked
 boolean Table4;
     private void jButton16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton16MouseClicked
-        if (Table4){
-        TournamentOrganizer.myTables[4].player1.addRecord(2, 0, 0);
-       TournamentOrganizer.myTables[4].player2.addRecord(0, 2, 0);
+        if (!Table4){
+        TournamentOrganizer.myTables[3].player1.addRecord(2, 0, 0);
+       TournamentOrganizer.myTables[3].player2.addRecord(0, 2, 0);
        Table4 = true;
        CheckIfComplete();
        }
     }//GEN-LAST:event_jButton16MouseClicked
 
     private void jButton15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton15MouseClicked
-       if (Table4){
+       if (!Table4){
         TournamentOrganizer.myTables[3].player1.addRecord(2, 1, 0);
        TournamentOrganizer.myTables[3].player2.addRecord(1, 2, 0);
        Table4 = true;
@@ -446,7 +446,7 @@ boolean Table4;
     }//GEN-LAST:event_jButton15MouseClicked
 
     private void jButton14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MouseClicked
-        if (Table4){
+        if (!Table4){
         TournamentOrganizer.myTables[3].player1.addRecord(1, 2, 0);
        TournamentOrganizer.myTables[3].player2.addRecord(2, 1, 0);
        Table4 = true;
@@ -455,7 +455,7 @@ boolean Table4;
     }//GEN-LAST:event_jButton14MouseClicked
 
     private void jButton13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseClicked
-     if (Table4){
+     if (!Table4){
         TournamentOrganizer.myTables[3].player1.addRecord(0, 2, 0);
        TournamentOrganizer.myTables[3].player2.addRecord(2, 0, 0);
        Table4 = true;
@@ -536,7 +536,10 @@ boolean Table4;
 
     private void CheckIfComplete() {
         if(Table1 && Table2 && Table3 && Table4){
+             TournamentOrganizer.configurePairings(); 
             dispose();
+        } else {
+            System.out.println(""+Table1+Table2+Table3+Table4);
         }
     }
 }

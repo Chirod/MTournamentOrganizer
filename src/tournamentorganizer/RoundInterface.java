@@ -15,6 +15,7 @@ import java.util.TimerTask;
  */
 public class RoundInterface extends javax.swing.JFrame {
 Timer myTimer = new Timer();
+    public static char[] myPassword;
 
     /**
      * Creates new form RoundInterface
@@ -22,6 +23,7 @@ Timer myTimer = new Timer();
     public RoundInterface() {
         initComponents();
         myTimer.scheduleAtFixedRate(update,0, 100);
+        GetPassword.main();
     }
     private TimerTask update = new TimerTask() {
 
@@ -60,8 +62,6 @@ Timer myTimer = new Timer();
                 GiveResultsButtonMouseClicked(evt);
             }
         });
-
-        Password.setText("jPasswordField1");
 
         Table1Favored.setText("jLabel1");
 
@@ -148,26 +148,19 @@ Timer myTimer = new Timer();
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void GiveResultsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GiveResultsButtonMouseClicked
-     char[] myPassword = new char[15];
-     myPassword[1] = 'm';
-     myPassword[2] = 'a';
-     myPassword[3] = 'd';
-     myPassword[4] = 'i';
-     myPassword[5] = 's';
-     myPassword[6] = 'o';
-     myPassword[7] = 'n';
-     myPassword[8] = '2';
-     myPassword[9] = '1';
-     myPassword[10] = '6';
-     myPassword[11] = '0';
-     myPassword[12] = '9';
-     myPassword[13] = '1';
-     myPassword[14] = '4';
-     myPassword[15] = '7';
-        if(Password.getPassword() == myPassword) {
+   boolean a = true;
+   for (int i = 0; i<myPassword.length && a;i++){
+       a = Password.getPassword()[i] == myPassword[i];
+   }
+   
+        if(a) {
+            System.out.println("password was correct");
            GetResults.main();
-            TournamentOrganizer.configurePairings();      
+                
+        } else {
+        System.out.println("password was not correct");
         }
+        
     }//GEN-LAST:event_GiveResultsButtonMouseClicked
 
     /**

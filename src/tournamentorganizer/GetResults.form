@@ -135,10 +135,10 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="jButton5" alignment="0" min="-2" pref="34" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButton7" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="jButton8" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="jButton5" alignment="0" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="jButton6" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -149,11 +149,11 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="jButton12" alignment="0" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButton9" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton10" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton11" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton12" alignment="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
